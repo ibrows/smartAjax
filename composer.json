@@ -1,0 +1,26 @@
+{
+    "name": "ibrows/smart-ajax",
+    "type": "library",
+    "description": "Smart ajax.js for to handle your ajax requests",
+    "keywords": ["ajax"],
+    "homepage": "https://github.com/ibrows/smartAjax",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "iBROWS AG",
+            "email": "info@ibrows.ch"
+        },
+        {
+            "name": "Dominik Spengler"
+        }
+
+    ],
+    "require": {
+        "php": ">=5.3.3"
+    },
+    "require-dev": {},
+    "suggest": {},
+    "autoload": {
+        "psr-0": { "SmartAjax": "src/" }
+    }
+}
