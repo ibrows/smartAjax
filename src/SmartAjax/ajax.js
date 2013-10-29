@@ -53,7 +53,7 @@ function getAjaxTarget($element) {
 	if(elements.size()>0) {
 		return elements.first();
 	}
-	return elements;
+	return $element;
 }
 
 function addAjaxOverlay($element, $source) {
@@ -168,7 +168,7 @@ function onAjaxSuccess(html, responseMessage, responseObject) {
 
 function ajaxRefresh(name) {
 	var name = jQuery.trim(name),
-		$element = jQuery('[data-ajax-id="'+name+'"]')
+		$element = jQuery('[data-ajax-id="'+name+'"]'),
 		$target = getAjaxTarget($element);
 	
 	jQuery.ajax({
