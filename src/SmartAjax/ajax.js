@@ -175,7 +175,7 @@ function ajaxRefresh(name) {
 		cache: false,
 		url: $element.attr('href') || $element.attr('data-remote') || $element.attr('action'),
 		context: $element,
-		beforeSend: onAjaxBeforeSend($garget, $element),
+		beforeSend: onAjaxBeforeSend($target, $element),
 		complete: onAjaxComplete($target, $element),
 		success: onAjaxSuccess,
 		error: onAjaxError
