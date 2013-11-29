@@ -184,13 +184,25 @@ function ajaxRefresh(name) {
 
 function onAjaxComplete($element, $source) {
 	return function(xhr, settings) {
-		removeAjaxOverlay($element, $source);
+                if(typeof window['preAjaxComplete'] === 'function') {
+                    window['preAjaxComplete']($element, $source);
+                }
+                removeAjaxOverlay($element, $source);
+                if(typeof window['postAjaxComplete'] === 'function') {
+                    window['postAjaxComplete']($element, $source);
+                }
 	};
 }
 
 function onAjaxBeforeSend($element, $source) {
 	return function(xhr, settings) {
-		addAjaxOverlay($element, $source);
+		if(typeof window['preAjaxBeforeSend'] === 'function') {
+                    window['preAjaxBeforeSend']($element, $source);
+                }
+                addAjaxOverlay($element, $source);
+                if(typeof window['postAjaxBeforeSend'] === 'function') {
+                    window['postAjaxBeforeSend']($element, $source);
+                }
 	};
 }
 
