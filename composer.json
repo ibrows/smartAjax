@@ -11,16 +11,9 @@
             "email": "info@ibrows.ch"
         },
         {
-            "name": "Dominik Spengler"
+            "name": "Dominik Spengler",
+            "email": "dominik.spengler@ibrows.ch"
         }
 
-    ],
-    "require": {
-        "php": ">=5.3.3"
-    },
-    "require-dev": {},
-    "suggest": {},
-    "autoload": {
-        "psr-0": { "SmartAjax": "src/" }
-    }
+    ]
 }
