@@ -2,7 +2,7 @@
     "name": "ibrows/smart-ajax",
     "type": "library",
     "description": "Smart Ajax Bundle  for to handle your ajax requests",
-    "keywords": ["ajax, symfony2"],
+    "keywords":  ["Smart", "Ajax", "inline-edit", "Bundle", "symfony2", "form", "redirect"],
     "homepage": "https://github.com/ibrows/smartAjax",
     "license": "MIT",
     "authors": [
