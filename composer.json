@@ -5,6 +5,9 @@
     "keywords":  ["Smart", "Ajax", "inline-edit", "Bundle", "symfony2", "form", "redirect"],
     "homepage": "https://github.com/ibrows/smartAjax",
     "license": "MIT",
+    "suggest": {
+        "symfony/symfony": "~2.1"
+    },
     "authors": [
         {
             "name": "iBROWS AG",
