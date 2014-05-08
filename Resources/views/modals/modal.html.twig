@@ -1,0 +1,34 @@
+{% block premodal %}{% endblock %}
+
+{% block modal %}
+    <div id="{{ id }}" class="modal fade">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                {% block header %}
+                    <div class="modal-header" id="modal_header_{{ id }}">
+                        {% block inner_header %}
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                            <h4 class="modal-title">{% block title %}{{ title|default('### Title ###')|raw }}{% endblock %}</h4>
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+
+                {% block body %}
+                    <div class="modal-body" id="modal_body_{{ id }}">
+                        {% block body_inner %}
+                            {{ body|default('### Body ###')|raw }}
+                        {% endblock %}
+                    </div>
+                {% endblock %}
+
+                {% block footer %}
+                    <div class="modal-footer" id="modal_footer_{{ id }}">
+                        {% block footer_inner %}{% endblock %}
+                    </div>
+                {% endblock %}
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block postmodal %}{% endblock %}

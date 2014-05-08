@@ -1,0 +1,26 @@
+{% extends '@IbrowsSmartAjax/modals/modal.html.twig' %}
+
+{% set saveButton = form[saveButtonName|default('save')] %}
+{% do saveButton.setRendered(1) %}
+
+{% block body_inner %}
+    {% set options = options|default([]) %}
+    {% set attr = options.attr|default([])|merge({id: 'ajax_modal_form_'~id, 'data-load': 'form#ajax_modal_form_'~id)|trim}) %}
+    {% set options = options|merge({attr: attr}) %}
+
+    {{ form_start(form, options) }}
+    {{ form_errors(form) }}
+    {{ form_widget(form) }}
+{% endblock %}
+
+{% block footer_inner %}
+    <button
+            type="submit"
+            onclick="$('#{{ id }}').find('form').submit();return false;"
+            class="btn primary"
+            name="{{ saveButton.vars.full_name }}"
+            value="{{ saveButton.vars.value }}"
+            ><i class="icon-save"></i> {{ "action.save"|trans }}
+    </button>
+    {{ form_end(form) }}
+{% endblock %}

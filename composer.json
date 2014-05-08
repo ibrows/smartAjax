@@ -1,14 +1,22 @@
 {
     "name": "ibrows/smart-ajax",
     "type": "library",
-    "description": "Smart ajax.js for to handle your ajax requests",
-    "keywords": ["ajax"],
+    "description": "Smart Ajax Bundle  for to handle your ajax requests",
+    "keywords": ["ajax, symfony2"],
     "homepage": "https://github.com/ibrows/smartAjax",
     "license": "MIT",
     "authors": [
         {
             "name": "iBROWS AG",
             "email": "info@ibrows.ch"
+        },
+        {
+            "name": "Marc Steiner",
+            "email": "marc.steinerr@ibrows.ch"
+        },
+        {
+            "name": "Mike Meier",
+            "email": "mike.meier@ibrows.ch"
         },
         {
             "name": "Dominik Spengler",
