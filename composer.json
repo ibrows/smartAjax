@@ -26,5 +26,8 @@
             "email": "dominik.spengler@ibrows.ch"
         }
 
-    ]
+    ],
+    "autoload": {
+        "psr-4": { "Ibrows\\SmartAjaxBundle\\": "" }
+    }
 }
