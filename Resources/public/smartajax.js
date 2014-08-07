@@ -138,7 +138,7 @@
                 var refreshElementsString = form.data(settings.refreshElementsDataAttribute);
                 var refreshSelectors = settings.defaultRefreshElements;
                 if(refreshElementsString){
-                    refreshSelectors.concat(refreshElementsString.split(settings.refreshElementsSeparator));
+                    refreshSelectors = refreshSelectors.concat(refreshElementsString.split(settings.refreshElementsSeparator));
                 }
 
                 // setup ajax settings
