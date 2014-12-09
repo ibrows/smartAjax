@@ -42,7 +42,7 @@
     };
 
     $.fn.ibrowsSmartAjaxAutoSubmitForm = function(options){
-        var settings = $.extend({
+        var settings = $.extend(true, {
             // Child selector for the form elements, on which the change listener is applied
             // <form data-auto-submit> = change listener on whole form -> each input element. Same as data-auto-submit="true"
             // <form data-auto-submit="select"> = only change listener applied on select elements (every jQuery selector is OK)
@@ -66,7 +66,7 @@
     };
 
     $.fn.ibrowsSmartAjaxForm = function(options){
-        var settings = $.extend({
+        var settings = $.extend(true, {
             // If clicked on a submit button, normally ajax scripts only send all the form data, without the clicked submit button value
             // This can cause miss interpretation on controller/server side, if for example 2 submit buttons exist and no information exists which one was pressed
             'generateHiddenSubmitValue': true,
@@ -142,7 +142,7 @@
                 }
 
                 // setup ajax settings
-                var ajaxSettings = $.extend(settings.ajaxSettings, {
+                var ajaxSettings = $.extend(true, settings.ajaxSettings, {
                     success: function(html, responseMessage, responseObject, context){
 
                         // Check if special redirect status code given
@@ -242,7 +242,7 @@
     };
 
     $.fn.ibrowsSmartAjaxLink = function(options){
-        var settings = $.extend(ibrowsSmartAjaxLinkSettings, options);
+        var settings = $.extend(true, ibrowsSmartAjaxLinkSettings, options);
         return this.each(function(){
             var elem = $(this);
             elem.on('click', function(e){
@@ -254,7 +254,7 @@
     };
 
     $.ibrowsSmartAjaxLinkOn = function(parentSelector, filterSelector, options){
-        var settings = $.extend(ibrowsSmartAjaxLinkSettings, options);
+        var settings = $.extend(true, ibrowsSmartAjaxLinkSettings, options);
         $(parentSelector).on('click', filterSelector, function(e){
             // block events
             blockEvents(e, settings.blockedEvents);
@@ -263,7 +263,7 @@
     };
 
     $.fn.ibrowsSmartAjaxLinkExecute = function(options){
-        var settings = $.extend(ibrowsSmartAjaxLinkSettings, options);
+        var settings = $.extend(true, ibrowsSmartAjaxLinkSettings, options);
         return this.each(function(){
             var elem = $(this);
 
@@ -280,7 +280,7 @@
                 loadUrl = elem.attr('href');
             }
 
-            var ajaxSettings = $.extend(settings.ajaxSettings, {
+            var ajaxSettings = $.extend(true, settings.ajaxSettings, {
                 url: loadUrl,
                 context: elem,
                 success: function(html, responseMessage, responseObject, context){
