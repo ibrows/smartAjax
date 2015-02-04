@@ -5,7 +5,7 @@
 
 {% block body_inner %}
     {% set options = options|default([]) %}
-    {% set attr = options.attr|default([])|merge({id: 'ajax_modal_form_'~id, 'data-load': 'form#ajax_modal_form_'~id)|trim}) %}
+    {% set attr = options.attr|default([])|merge({id: 'ajax_modal_form_'~id, 'data-load': 'form#ajax_modal_form_'~id}) %}
     {% set options = options|merge({attr: attr}) %}
 
     {{ form_start(form, options) }}
