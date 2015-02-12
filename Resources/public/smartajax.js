@@ -74,7 +74,7 @@
             // Default refresh elements, for example #flashmessages so that after every ajax submit flashmessages are rendered
             'defaultRefreshElements': [],
 
-            'blockedEvents': ['preventDefault'],
+            'blockedEvents': ['preventDefault', 'stopPropagation'],
 
             // search on form for 'data-refresh-elements' string to get refreshing selectors, separated by ","
             'refreshElementsDataAttribute': 'refresh-elements',
