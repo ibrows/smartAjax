@@ -120,7 +120,7 @@
                     var submit = $(this);
                     var name = submit.attr('name');
                     var value = submit.val();
-                    var hiddenInput = form.find(':submit[name="'+ name +'"]');
+                    var hiddenInput = form.find('input:submit[name="'+ name +'"]');
 
                     if(hiddenInput.length > 0){
                         hiddenInput.val(value);
