@@ -122,9 +122,6 @@
                     var value = submit.val();
                     var hiddenInput = form.find(':submit[name="'+ name +'"]');
 
-                    console.log(name);
-                    console.log(hiddenInput);
-
                     if(hiddenInput.length > 0){
                         hiddenInput.val(value);
                     }else{
