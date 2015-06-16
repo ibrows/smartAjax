@@ -122,6 +122,9 @@
                     var value = submit.val();
                     var hiddenInput = form.find(':submit[name="'+ name +'"]');
 
+                    console.log(name);
+                    console.log(hiddenInput);
+
                     if(hiddenInput.length > 0){
                         hiddenInput.val(value);
                     }else{
@@ -130,7 +133,7 @@
                 });
             }
 
-            form.on('submit', function(e){
+            form.on('submit', function(e) {
                 // block events
                 blockEvents(e, settings.blockedEvents);
 
@@ -191,6 +194,15 @@
                                 var targetHtml = jQuery(selector, '<div>'+html+'</div>').html();
                                 jQuery(target).html(targetHtml);
                             });
+                        }
+
+                        if( jQuery(form).attr('data-notify') ) {
+                            var notificationElement = jQuery(form).attr('data-notify');
+                            jQuery(notificationElement).trigger('smartajax-success');
+                        }
+
+                        if( jQuery(form).find("[data-notify]").length > 0 ) {
+                            jQuery(jQuery(form).find("[data-notify]").attr('data-notify')).trigger('smartajax-success');
                         }
                     },
 
