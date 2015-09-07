@@ -312,8 +312,8 @@
                         var loadintoElement = $(loadinto);
                         if(loadfrom == false){
                             loadintoElement.html(html);
-                        }else{
-                            var targetHtml = $(loadfrom, '<div>'+ html +'</div>').html();
+                        } else {
+                            var targetHtml = $('<div>'+ html +'</div>').html();
                             loadintoElement.html(targetHtml);
                         }
                     }
