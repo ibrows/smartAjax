@@ -315,6 +315,7 @@
                         } else {
                             var targetHtml = $('<div>'+ html +'</div>').html();
                             loadintoElement.html(targetHtml);
+                            $(loadintoElement).trigger('data-loaded');
                         }
                     }
 
