@@ -6,7 +6,7 @@
     "homepage": "https://github.com/ibrows/smartAjax",
     "license": "MIT",
     "suggest": {
-        "symfony/symfony": "~2.1"
+        "symfony/symfony": "~2.1|3.4.*"
     },
     "authors": [
         {
